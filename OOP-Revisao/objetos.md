@@ -25,10 +25,11 @@ Atributos privados e protegidos você não pode mexer a não ser que você estej
 ## Métodos acessores - getter, setter e construtor 
 Pelo que eu entendi é basicamente uma continuação sobre a visibilidade de atributos e métodos. Porque ele está batendo bastante na tecla de dar acesso a um atributo, mas sem dar acesso direto a esse atributo. Tem a ver com boas práticas por ter uma segurança adicional de não deixar tudo liberado e acabar vendo a aplicação virar uma bagunça.
 Além disso, a questão de trabalhar com essas formas de acessar o objeto é que você abstrai dentro desses métodos a forma como você irá acessar os atributos/métodos dele. 
+O ideal é que métodos não escrevam.
 
 ### Resumão:
 
 **Getters:** Métodos acessores conseguem acessar um determinado atributo mantendo a segurança de acesso a ele.  
-**Setters:** Métodos modificadores/mutantes(hue) modificam coisas que estão dentro do objeto garantindo a segurança do atributo. Com eles, você consegue alterar atributos privados.
+**Setters:** Métodos modificadores/mutantes(hue) modificam coisas que estão dentro do objeto garantindo a segurança do atributo. Com eles, você consegue alterar atributos privados.  
 **Construct:** Quando eu instanciar um objeto ele já inicia executando esse comando. Foi usado o exemplo de você iniciar sua classe já chamando o método tampar ou já definindo um atributo por padrão. Além disso, ele pode receber esses parâmetros que irão definir atributos na classe(modelo, cor e ponta, por exemplo)
 
