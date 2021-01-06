@@ -1,11 +1,5 @@
 # Orientação a objetos
 
-> esse pode ser um indice com os conteúdos da parte de revisão. e enquanto eu não separo um lugar específico para algumas coisas posso colocar as anotações aqui.
-
-*Bases:* 
-- Palestra do [Marcel dos Santos](https://twitter.com/marcelgsantos): [Projetando Softwares Orientado a objetos com qualidade](https://www.youtube.com/watch?v=LZ2ouAttbvM)
-- Curso Programação Orientada a Objetos com PHP do Guanabara no [Curso em Vídeo](https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dmGuLII3tsvryMMD7VgcT7x&index=1)]
-
 Vantagens da Orientação a objetos:
 
 - Confiável: O isolamento entre as partes gera software seguro. Ao alterar uma parte, nenhuma outra é afetada. 
@@ -24,6 +18,8 @@ Vantagens da Orientação a objetos:
 
 ### Abstração
 
+Abstrair é você considerar somente aquilo que te importa em determinado contexto ou num determinado momento de programação de uma classe, por exemplo.
+
 Trata a representação de um conceito da vida real dentro do sistema. Por exemplo um usuário dentro do seu sistema/app - quais são as características que o seu usuário precisa ter? ele precisa de cpf, data de nascimento ou só nome e email?
 Levando em consideração que um usuário é uma pessoa, você precisa ter na sua classe todos atributos que uma pessoa tem? quais são os métodos que você precisa no contexto de um sistema? tipo, a pessoa precisa do método TOMAR CERVEJA dentro do teu sistema?
 
@@ -31,17 +27,17 @@ Em relação ao estado, qual o estado importante pra você naquele contexto? tem
 
 ### Encapsulamento
 
-Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior. Você pode conversar com essa capsula. A conversa, a troca de informações da capsula com o mundo externo, chamamos de mensagem. Você não vai "entrar" nessa capsula, você irá apenas trocar mensagens com ela. Um código encapsulado usa interfaces(moldes) e esses moldes padrão vão fazer com que não importa como eu vou fazer o código o resultado será sempre o mesmo.
+Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior. Você pode conversar com essa capsula. A conversa, a troca de informações da capsula com o mundo externo, chamamos de mensagem. Você não vai "entrar" nessa capsula, você irá apenas trocar mensagens com ela. Um código encapsulado usa interfaces(moldes) e esses __moldes padrão__ vão fazer com que não importa como eu fizer no código o que importa mesmo é se o resultado será sempre o mesmo. Usando o exemplo lúdico das pilhas(duracel, rayovac, panasonic...), a gente sabe qual o modelo específico de pilha que o nosso controle remoto precisa, não importa qual a marca que eu vou comprar, o importante é que essa marca forneça o modelo específico de pilha que eu preciso.
 
-Encapsular não é obrigatório, mas é uma boa prática para produzir classes mais eficientes.
-
-Um objeto bem encapsulado, possui uma interface bem definida!
+__É obrigatório?__ Encapsular não é obrigatório, mas é uma boa prática para produzir classes mais eficientes.  
 
 A ideia do encapsulamento é você proteger sua classe do mundo externo e que todas as trocas de mensagens aconteçam por meio da sua interface.
 
-Vantagens de encapsular:
+Sempre lembrar que um objeto bem encapsulado, possui uma interface bem definida!
 
-1 - Tornar mudanças invisíveis (se eu precisar mudar um software por dentro e ele estiver bem encapsulado, mantendo a interface eu posso trocar "a pilha" contanto que a "energia" seja mandada no mesmo padrão. E o mesmo vale pra quando estamos pensando em banco de dados, apis utilizadas).
+E quais são as vantagens de encapsular?
+
+1 - Tornar mudanças invisíveis (se eu precisar mudar um software por dentro e ele estiver bem encapsulado, mantendo a interface eu posso trocar "a pilha" contanto que a "energia" seja mandada no mesmo padrão. E o mesmo vale pra quando estamos pensando em banco de dados, apis utilizadas, etc).
 
 2 - Facilitar reutilização de código (core do drupal tem bons exemplos de bom encapsulamento)
 
