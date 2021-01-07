@@ -29,6 +29,8 @@ Em relação ao estado, qual o estado importante pra você naquele contexto? tem
 
 Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior. Você pode conversar com essa capsula. A conversa, a troca de informações da capsula com o mundo externo, chamamos de mensagem. Você não vai "entrar" nessa capsula, você irá apenas trocar mensagens com ela. Um código encapsulado usa interfaces(moldes) e esses __moldes padrão__ vão fazer com que não importa como eu fizer no código o que importa mesmo é se o resultado será sempre o mesmo. Usando o exemplo lúdico das pilhas(duracel, rayovac, panasonic...), a gente sabe qual o modelo específico de pilha que o nosso controle remoto precisa, não importa qual a marca que eu vou comprar, o importante é que essa marca forneça o modelo específico de pilha que eu preciso.
 
+Encapsulamento é a característica da POO que permite separar o programa em várias partes menores e independentes. Cada parte possui sua implementação isolada e realiza seu trabalho de forma autônoma. Com essa característica é possível ocultar os detalhes internos de cada parte através de uma interface.
+
 __É obrigatório?__ Encapsular não é obrigatório, mas é uma boa prática para produzir classes mais eficientes.  
 
 A ideia do encapsulamento é você proteger sua classe do mundo externo e que todas as trocas de mensagens aconteçam por meio da sua interface.
