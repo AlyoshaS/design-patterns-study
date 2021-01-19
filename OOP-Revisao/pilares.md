@@ -16,16 +16,18 @@ Vantagens da Orientação a objetos:
 
 ## Pilares da programação orientada a objetos
 
-### Abstração
+Conceito de pilar muitas vezes pensamos "po, tem que ter sustentação, para ter o segundo pilar(herança), preciso ter o primeiro(encapsulamento)", mas se tratando de herança e encapsulamento não existe essa obrigatoriedade. O que existe mesmo é um ideal de boas práticas, mas teu código não te obriga a seguir isso. Nesse quesito, só muda quando estamos trabalhando com polimorfismo.
 
-Abstrair é você considerar somente aquilo que te importa em determinado contexto ou num determinado momento de programação de uma classe, por exemplo.
+## Abstração
+
+Abstrair é você considerar somente aquilo que te importa em determinado contexto ou num determinado momento de programação de uma classe, por exemplo. Representa uma entidade, incluindo apenas seus atributos mais relevantes.
 
 Trata a representação de um conceito da vida real dentro do sistema. Por exemplo um usuário dentro do seu sistema/app - quais são as características que o seu usuário precisa ter? ele precisa de cpf, data de nascimento ou só nome e email?
 Levando em consideração que um usuário é uma pessoa, você precisa ter na sua classe todos atributos que uma pessoa tem? quais são os métodos que você precisa no contexto de um sistema? tipo, a pessoa precisa do método TOMAR CERVEJA dentro do teu sistema?
 
 Em relação ao estado, qual o estado importante pra você naquele contexto? tem algo sobre estar feliz ou triste? isso é uma informação importante? ou você precisa só saber se seu usuário tá online ou offline? realizou ou não uma compra? etc
 
-### Encapsulamento
+## Encapsulamento
 
 Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior. Você pode conversar com essa capsula. A conversa, a troca de informações da capsula com o mundo externo, chamamos de mensagem. Você não vai "entrar" nessa capsula, você irá apenas trocar mensagens com ela. Um código encapsulado usa interfaces(moldes) e esses __moldes padrão__ vão fazer com que não importa como eu fizer no código o que importa mesmo é se o resultado será sempre o mesmo. Usando o exemplo lúdico das pilhas(duracel, rayovac, panasonic...), a gente sabe qual o modelo específico de pilha que o nosso controle remoto precisa, não importa qual a marca que eu vou comprar, o importante é que essa marca forneça o modelo específico de pilha que eu preciso.
 
@@ -64,3 +66,90 @@ para lembrar de pontos importantes sobre interfaces:
  - Serviços diferentes terão a mesma assinatura
 
 **Método abstrato** é previsto, mas não é implementado. É aquele método que não será desenvolvido na interface, nós só mostramos na interface que vai existir um método X ou Y para que você consiga trocar mensagens com aquele objeto, mas o método em si ficará na classe.
+
+## Herança
+
+Permite basear uma nova classe na definição de uma outra classe previamente existente.
+
+Basicamente, Uma classe filha pode puxar(herdar) características e comportamentos da classe mãe.
+
+```php
+aluno {
+  nome
+  idade
+  sexo
+  matricula
+  curso
+
+  fazerAniv()
+  cancelarMatricula()
+}
+professor {
+  nome
+  idade
+  sexo
+  especialidade
+  salario
+
+  fazerAniv()
+  receberAumento()
+}
+
+funcionario {
+  nome
+  idade
+  sexo
+  setor
+  trabalhando
+
+  fazerAniv()
+  mudarTrabalho()
+}
+```
+
+classe mãe(ou superclasse) será Pessoa e todas as outras classes(subclasse) irão herdar essas características e comportamento da classe mãe.  
+Modelando dessa forma fica mais fácil modelas as classes filhas porque elas só vão precisar se preocupar com os atributos e métodos relacionados a aquele objeto em específico, não precisando implementar novamente tudo que a classe mãe implemente(num comparativo meio chulo, posso lembrar das interfaces, onde eu era obrigada a implementar todos os métodos que estavam lá, já nas subclasses eu não preciso fazer isso). Nesse caso, a classe Aluno, Funcionario e Professor herdam tudo de Pessoa.
+
+```php
+Pessoa {
+  nome
+  idade
+  sexo
+
+  fazerAniv()
+}
+```
+
+**Navegação pela Árvore de Herança:**
+O conceito de subclasse e superclasse depende do teu ponto de referencial. Uma subclasse também pode ser uma superclasse. Toda subclasse herda tudo que sua superclasse tem, mesmo que não esteja disponível(dependendo dos métodos de acesso).
+
+Quando temos uma superclasse que não tem superclasses ela é considerada a Raiz da minha árvore hierarquica e quando temos subclasses que não têm filhas, chamamos de folhas. Quando percorremos a árvore de cima pra baixo, estamos fazendo uma Especialização. Quando percorremos de baixo para cima, estamos fazendo uma Generalização.
+
+**Herança Pobre**: Subclasse ao ser gerada só tem os atributos e métodos da sua superclasse.
+
+@TODO revisar  
+**Herança de Implementação** 
+Quando a subclasse tem seus próprios atributos e métodos além dos que ela herdou de sua superclasse.
+
+**Herança para diferença**: quando além dos métodos/atributos herdados pela sua superclasse, a subclasse adiciona novos métodos/atributos  
+
+<div align="center">
+  <img src="../assets/heranca.png" width="400" height="600">
+</div>
+
+### Conceitos de Abstrato e Final
+
+- **Classe Abstrata**: não pode ser instanciada. Só pode servir como progenitora.
+
+- **Método Abstrato**: declarado, mas não implementado na progenitora. Eles só podem ser colocados em uma interface ou uma classe abstrata.
+
+- **Classe Final**: Não pode ser herdada por outra classe, não pode ter filhos. Obrigatoriamente é uma folha!
+
+- **Método Final**: Métodos que não podem ser sobrescritos pelas suas subclasses. São obrigatoriamente herdados. Você **não pode** gerar uma especialização desse método!
+
+
+## Polimorfismo
+
+Permite que um mesmo nome represente vários comportamentos diferentes
+
+Implementar o mesmo método herdado, porém sobrepondo ele para atender a necessidade daquela classe específica.
