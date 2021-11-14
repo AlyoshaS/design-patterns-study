@@ -143,13 +143,16 @@ Quando a subclasse tem seus próprios atributos e métodos além dos que ela her
 
 - **Método Abstrato**: declarado, mas não implementado na progenitora. Eles só podem ser colocados em uma interface ou uma classe abstrata.
 
-- **Classe Final**: Não pode ser herdada por outra classe, não pode ter filhos. Obrigatoriamente é uma folha!
+- **Classe Final(palavra _final_ antes de _class_)**: Não pode ser herdada por outra classe, não pode ter filhos. Obrigatoriamente é uma folha! Última classe da hierarquia.
 
-- **Método Final**: Métodos que não podem ser sobrescritos pelas suas subclasses. São obrigatoriamente herdados. Você **não pode** gerar uma especialização desse método!
+- **Método Final(palavra _final_ antes de _function_)**: Métodos que não podem ser sobrescritos pelas suas subclasses. São obrigatoriamente herdados. Você **não pode** gerar uma especialização desse método! No caso, esse método não pode ser reescrito/criar um novo resultado pra ele.
 
 
 ## Polimorfismo
 
+Assinatura do método: Quantidade e tipo dos parâmetros.
+
 Permite que um mesmo nome represente vários comportamentos diferentes
 
 Implementar o mesmo método herdado, porém sobrepondo ele para atender a necessidade daquela classe específica.
+https://stackify.com/oops-concepts-in-java/
